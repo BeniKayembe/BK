@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Your name: <span id="name"></span></p>
+    <p>Email Id: <span id="email"></span></p>
+    <p>Phone No: <span id="tel"></span></p>
+    <p>Message: <span id="message"></span></p>
+    <!-- <p>Message: <span id="message"></span></p> -->
+
+    <script>
+        const getDataFromFirstPage=new
+URLSearchParams(window.location.search);
+
+        document.getElementById('name').textContent=getDataFromFirstPage.get('name')|| "N/A"
+        document.getElementById('email').textContent=getDataFromFirstPage.get('email')|| "N/A"
+        document.getElementById('tel').textContent=getDataFromFirstPage.get('tel')|| "N/A"
+        document.getElementById('message').textContent=getDataFromFirstPage.get('message')|| "N/A"
+    </script>
+</body>
+</html>
